@@ -1,153 +1,761 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>AURA Studio // AI Prompts That Actually Work - 2026</title>
-    <meta name="description" content="Premium prompt engineering frameworks designed to unlock the absolute limits of language models. Master the PEF architecture.">
-    <meta name="keywords" content="AI Prompts, Prompt Engineering, ChatGPT Prompts, Claude Prompts, AI Workflows, AURA Studio, JSON Prompts, Tech, Business Automation">
+    <title>AURA STUDIO // High-Leverage AI Systems & Software</title>
+    <meta name="description" content="AURA Studio: PEF Prompt Engineering Framework on Gumroad, The System Android Beta APK, and experimental autonomous software.">
     <meta name="author" content="Aaron Saha">
-    <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="AURA Studio // Premium AI Prompts">
-    <meta property="og:description" content="Transform AI from a simple tool into a true collaborator. Stop guessing. Start generating.">
-    <meta property="og:type" content="website">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
-    
+    <!-- Open Graph & Meta -->
+    <meta property="og:title" content="AURA Studio // Systems & Software">
+    <meta property="og:description" content="Visualize the PEF architecture, download The System APK beta, and preview future autonomous tools.">
+    <meta property="og:image" content="favicon.png">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        body { 
-            background-color: #09090b; 
-            color: #e4e4e7; 
-            font-family: system-ui, -apple-system, sans-serif; 
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        background: '#040507',
+                        surface: '#090b10',
+                        'surface-light': '#11141d',
+                        brand: {
+                            cyan: '#00f2fe',
+                            violet: '#8b5cf6',
+                            indigo: '#6366f1',
+                            emerald: '#10b981',
+                        }
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'gradient-x': 'gradient-x 12s ease infinite',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                            '50%': { opacity: '0.6', transform: 'scale(1.08)' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        'gradient-x': {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+                        }
+                    }
+                }
+            }
         }
-        
-        .glass-card { background: rgba(9, 9, 11, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.4s; }
-        .glass-card:hover { border-color: #6366f1; transform: translateY(-5px); box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.2); }
-        
-        .premium-glow { position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15), transparent 70%); pointer-events: none; }
-        .premium-border { border: 1px solid rgba(99, 102, 241, 0.5); box-shadow: 0 0 20px rgba(99, 102, 241, 0.1); }
-        
-        .text-gradient { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
-        .animate-float { animation: float 6s ease-in-out infinite; }
+    </script>
+
+    <style>
+        body {
+            background-color: #040507;
+            color: #f1f5f9;
+            font-family: 'Inter', system-ui, sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 50% -20%, rgba(99, 102, 241, 0.18) 0%, transparent 65%),
+                radial-gradient(circle at 100% 40%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 0% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        /* Ambient glowing effects */
+        .glass-panel {
+            background: rgba(9, 11, 16, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+        }
+
+        .gradient-border-indigo {
+            position: relative;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.15) 0%, rgba(13, 16, 24, 0.8) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.35);
+        }
+
+        .gradient-border-emerald {
+            position: relative;
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.12) 0%, rgba(13, 16, 24, 0.8) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+
+        .glow-text-indigo {
+            text-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
+        }
+
+        .glow-text-emerald {
+            text-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #040507; }
+        ::-webkit-scrollbar-thumb { background: #1e2433; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2d3748; }
+
+        /* Code block styling */
+        .code-preview {
+            background: #06080d;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .token-keyword { color: #c084fc; }
+        .token-string { color: #34d399; }
+        .token-key { color: #818cf8; }
+        .token-number { color: #f59e0b; }
+        .token-comment { color: #64748b; font-style: italic; }
     </style>
 </head>
-<body class="selection:bg-indigo-500/30">
+<body class="selection:bg-indigo-500/30 selection:text-indigo-200">
 
-    <div class="fixed top-[-20%] left-[20%] w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+    <!-- Top Glow Spots -->
+    <div class="fixed -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-indigo-600/20 blur-[130px] pointer-events-none -z-10 rounded-full"></div>
+    <div class="fixed top-1/3 -right-40 w-[500px] h-[400px] bg-emerald-600/10 blur-[150px] pointer-events-none -z-10 rounded-full"></div>
 
-    <nav class="w-full border-b border-zinc-800/80 bg-[#09090b]/80 backdrop-blur-xl sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-bold tracking-tighter text-xl text-white flex items-center gap-2">
-                <span class="text-indigo-500 animate-pulse">●</span> AURA.STUDIO
+    <!-- Minimalist Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-[#040507]/80 backdrop-blur-2xl">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-8 h-8 rounded-lg overflow-hidden border border-white/[0.1] bg-black/60 p-0.5 shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition flex items-center justify-center">
+                    <img src="favicon.png" alt="AURA Studio Logo" class="w-full h-full object-contain">
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-base">AURA<span class="text-zinc-500 font-light">.STUDIO</span></span>
+                    <span class="text-[10px] font-mono tracking-widest text-indigo-400/90 uppercase px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-500/20 hidden sm:inline-block">Store &amp; Lab</span>
+                </div>
+            </a>
+
+            <!-- Center Links -->
+            <div class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-zinc-400">
+                <a href="#pef-guide" class="hover:text-white transition flex items-center gap-1.5">
+                    <span class="text-indigo-400">01.</span> PEF Framework
+                </a>
+                <a href="#the-system" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-emerald-400">02.</span> The System (Beta)
+                </a>
+                <a href="#upcoming" class="hover:text-purple-400 transition flex items-center gap-1.5">
+                    <span class="text-purple-400">03.</span> Future Pipeline
+                </a>
             </div>
-            <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800">
-                System: Jarvis Online
+
+            <!-- Right CTA Button -->
+            <div class="flex items-center gap-3">
+                <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 active:scale-95 px-4 py-2 rounded-xl transition shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50">
+                    <span>Gumroad Store</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="max-w-4xl mx-auto px-6 pt-24 pb-16 text-center relative">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 mb-8 border border-indigo-500/30 rounded-full bg-indigo-500/10 text-indigo-400 text-[10px] font-mono tracking-widest uppercase">
-            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
-            PEF Architecture Deployed
+    <!-- Hero Header -->
+    <header class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center relative">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md mb-6">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+            <span class="text-[11px] font-mono tracking-widest text-zinc-300 uppercase">Architecture Catalog // 2026 Releases</span>
         </div>
-        
-        <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 text-white leading-tight">
-            From Simple Tool to<br>
-            <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 text-gradient bg-300% animate-gradient">True Collaborator.</span>
+
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white leading-[1.1] mb-6">
+            Engineered for <br>
+            <span class="bg-gradient-to-r from-indigo-400 via-purple-300 to-emerald-400 bg-clip-text text-transparent">Cognitive Leverage.</span>
         </h1>
-        
-        <p class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            The Professional's Guide to Prompt Engineering. Move beyond simple search queries and start generating synthetic intelligence, auditable data, and structured workflows.
+
+        <p class="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal mb-10">
+            A curated lab of production-grade prompt frameworks, local-first adaptive software, and experimental tools built for developers, founders, and intelligence operators.
         </p>
 
-        <div class="flex flex-wrap justify-center gap-6 sm:gap-12 text-sm font-mono text-zinc-500 border-y border-zinc-800/50 py-6 mb-8">
-            <div class="flex flex-col"><span class="text-white text-xl font-bold mb-1">JSON</span><span>Structured Output</span></div>
-            <div class="flex flex-col"><span class="text-white text-xl font-bold mb-1">4-Part</span><span>PEF Framework</span></div>
-            <div class="flex flex-col"><span class="text-white text-xl font-bold mb-1">Instant</span><span>Digital Access</span></div>
+        <!-- Quick Jump Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-3 text-xs font-mono">
+            <a href="#pef-guide" class="px-4 py-2 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/30 hover:bg-indigo-500/20 transition flex items-center gap-2">
+                <span>🧠 PEF Prompt Guide (₹99)</span>
+                <span class="text-zinc-500">→</span>
+            </a>
+            <a href="#the-system" class="px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/20 transition flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>⚡ The System APK (Beta Sideload)</span>
+                <span class="text-zinc-500">→</span>
+            </a>
+            <a href="#upcoming" class="px-4 py-2 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/30 hover:bg-purple-500/20 transition flex items-center gap-2">
+                <span>🚀 4 Upcoming Projects</span>
+                <span class="text-zinc-500">→</span>
+            </a>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 pb-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="glass-card rounded-3xl p-1 relative overflow-hidden group premium-border animate-float">
-                <div class="premium-glow"></div>
-                
-                <div class="bg-[#09090b]/90 rounded-[23px] p-8 h-full flex flex-col relative z-10">
-                    <div class="absolute top-4 right-4 bg-indigo-600/20 text-indigo-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-indigo-500/30">
-                        Bestseller
+    <!-- ========================================================================= -->
+    <!-- SECTION 1: PEF ARCHITECTURE (VISUALIZED + CONNECTED TO GUMROAD)           -->
+    <!-- ========================================================================= -->
+    <section id="pef-guide" class="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-white/[0.06] pb-8">
+            <div>
+                <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">
+                    <span>FLAGSHIP DIGITAL ASSET</span>
+                    <span>•</span>
+                    <span class="text-amber-400">★ Bestseller on Gumroad</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    AI Prompts That Actually Work
+                </h2>
+                <p class="text-zinc-400 text-sm mt-2 max-w-xl leading-relaxed">
+                    A comprehensive 22-page Confidential Edition guide that deconstructs the <b>PEF Architecture</b> to turn vague LLM replies into deterministic, auditable JSON intelligence.
+                </p>
+            </div>
+
+            <!-- Price & Direct Buy Pill -->
+            <div class="flex items-center gap-4 flex-shrink-0">
+                <div class="text-right">
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-3xl font-black text-white glow-text-indigo">₹99</span>
+                        <span class="text-sm text-zinc-500 line-through">₹499</span>
                     </div>
+                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest">Instant PDF Access</span>
+                </div>
+                <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" 
+                   class="bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 transition flex items-center gap-2">
+                    <span>Buy on Gumroad</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- VISUALIZATION: THE 4-STAGE PEF PIPELINE -->
+        <div class="mb-12">
+            <div class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-4 flex items-center justify-between">
+                <span>The PEF Architecture Pipeline (Visualized)</span>
+                <span class="text-indigo-400">Deterministic Prompt Engine</span>
+            </div>
+
+            <!-- Pipeline Cards Flow -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Stage 1: Role -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group border-indigo-500/20 hover:border-indigo-500/60 transition">
+                    <div class="text-xs font-mono text-indigo-400 font-bold mb-3 flex items-center justify-between">
+                        <span>[01] ROLE</span>
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1.5">Persona &amp; Guardrails</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Defines strict domain boundaries, authoritative identity, and negative constraints to prevent hallucination.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/[0.05] font-mono text-[11px] text-zinc-500">
+                        Rule: Zero subjective filler
+                    </div>
+                </div>
+
+                <!-- Stage 2: Context -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group border-indigo-500/20 hover:border-indigo-500/60 transition">
+                    <div class="text-xs font-mono text-purple-400 font-bold mb-3 flex items-center justify-between">
+                        <span>[02] CONTEXT</span>
+                        <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1.5">State &amp; Constraints</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Supplies execution variables, target audience, environmental limits, and real-time operational context.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/[0.05] font-mono text-[11px] text-zinc-500">
+                        Injects: Structured data facts
+                    </div>
+                </div>
+
+                <!-- Stage 3: Task -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group border-indigo-500/20 hover:border-indigo-500/60 transition">
+                    <div class="text-xs font-mono text-cyan-400 font-bold mb-3 flex items-center justify-between">
+                        <span>[03] TASK</span>
+                        <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1.5">Atomic Decomposition</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Breaks down abstract instructions into multi-step chains of thought with self-verifying logic checks.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/[0.05] font-mono text-[11px] text-zinc-500">
+                        Method: Step-by-step chain
+                    </div>
+                </div>
+
+                <!-- Stage 4: Output -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group border-indigo-500/20 hover:border-indigo-500/60 transition">
+                    <div class="text-xs font-mono text-emerald-400 font-bold mb-3 flex items-center justify-between">
+                        <span>[04] OUTPUT</span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1.5">Typed JSON Schemas</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Forces the model into machine-parsable formats (strict JSON, Markdown tables, or code artifacts).
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-white/[0.05] font-mono text-[11px] text-zinc-500">
+                        Output: 100% programmatic
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- INTERACTIVE VISUAL COMPARISON: NAIVE PROMPT VS PEF ARCHITECTURE -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Left: Architecture Breakdown & Features -->
+            <div class="lg:col-span-5 glass-panel p-8 rounded-3xl flex flex-col justify-between border-white/[0.08]">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-500/10 text-indigo-400 font-mono text-xs mb-4">
+                        <span>Swipe File Included</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">What's Inside the Confidential Edition:</h3>
                     
-                    <div class="text-4xl mb-4">🧠</div>
-                    <h3 class="text-2xl font-bold text-white mb-2">AI Prompts That Actually Work – 2026</h3>
-                    <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Master the 4-part PEF Framework (Role, Context, Task, Output) to elicit precise, valuable, and structured output from any LLM.</p>
+                    <ul class="space-y-4 text-xs sm:text-sm text-zinc-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-400 font-mono font-bold mt-0.5">✓</span>
+                            <div>
+                                <b class="text-white">The Core PEF Framework Spec:</b>
+                                <p class="text-zinc-400 text-xs mt-0.5">Understand the cognitive mechanics of how LLMs parse attention across structured tokens.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-400 font-mono font-bold mt-0.5">✓</span>
+                            <div>
+                                <b class="text-white">Production Swipe File:</b>
+                                <p class="text-zinc-400 text-xs mt-0.5">Ready-to-use production prompt templates for product strategy, system architecture, copywriting, and code reviews.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-400 font-mono font-bold mt-0.5">✓</span>
+                            <div>
+                                <b class="text-white">Chain Prompting Sequences:</b>
+                                <p class="text-zinc-400 text-xs mt-0.5">Techniques to run multi-agent cascades where one prompt validates and refines the next.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-400 font-mono font-bold mt-0.5">✓</span>
+                            <div>
+                                <b class="text-white">Lifetime Updates:</b>
+                                <p class="text-zinc-400 text-xs mt-0.5">Direct Gumroad distribution includes automatic notification whenever new model updates drop.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-white/[0.06] flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-zinc-500 font-mono">Format: PDF (22 Pages)</span>
+                        <div class="text-white font-bold text-sm">₹99 on Gumroad</div>
+                    </div>
+                    <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" 
+                       class="text-xs font-mono font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5 transition">
+                        <span>Claim Your Copy</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Code Visualization -->
+            <div class="lg:col-span-7 glass-panel rounded-3xl overflow-hidden border-white/[0.08] flex flex-col">
+                <!-- Code Window Top Bar -->
+                <div class="bg-[#0b0e14] px-5 py-3 border-b border-white/[0.06] flex items-center justify-between text-xs font-mono">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/70 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/70 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/70 inline-block"></span>
+                        <span class="ml-2 text-zinc-400">pef-blueprint-sample.json</span>
+                    </div>
+                    <span class="text-indigo-400/80 uppercase text-[10px]">PEF Engine v2.6</span>
+                </div>
+
+                <!-- Live Schema Preview -->
+                <div class="p-6 code-preview flex-grow overflow-x-auto text-zinc-300">
+<pre><code>{
+  <span class="token-key">"$schema"</span>: <span class="token-string">"https://aura.studio/schemas/pef-v2.json"</span>,
+  <span class="token-key">"role"</span>: {
+    <span class="token-key">"persona"</span>: <span class="token-string">"Principal Enterprise Architect & Security Auditor"</span>,
+    <span class="token-key">"negative_constraints"</span>: [
+      <span class="token-string">"No pleasantries, no fluff"</span>,
+      <span class="token-string">"Never fabricate API signatures"</span>
+    ]
+  },
+  <span class="token-key">"context"</span>: {
+    <span class="token-key">"domain"</span>: <span class="token-string">"Production Edge Microservices"</span>,
+    <span class="token-key">"constraints"</span>: { <span class="token-key">"max_latency_ms"</span>: <span class="token-number">50</span>, <span class="token-key">"failover"</span>: <span class="token-keyword">true</span> }
+  },
+  <span class="token-key">"task"</span>: {
+    <span class="token-key">"execution_flow"</span>: [
+      <span class="token-string">"1. Parse ingress traffic vectors"</span>,
+      <span class="token-string">"2. Validate against zero-trust policy"</span>,
+      <span class="token-string">"3. Output strict JSON diagnostics"</span>
+    ]
+  },
+  <span class="token-key">"output_format"</span>: {
+    <span class="token-key">"type"</span>: <span class="token-string">"application/json"</span>,
+    <span class="token-key">"strict"</span>: <span class="token-keyword">true</span>
+  }
+}</code></pre>
+                </div>
+
+                <!-- Code Window Footer -->
+                <div class="bg-[#080b10] px-6 py-3 border-t border-white/[0.06] flex items-center justify-between text-xs font-mono text-zinc-500">
+                    <span>Compatible with: Claude 3.7 • GPT-4o • Gemini 2.5 • DeepSeek</span>
+                    <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">
+                        Get 40+ Templates on Gumroad →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 2: THE SYSTEM (BETA PACKAGE APK SHOWCASE + DIRECT DOWNLOAD)       -->
+    <!-- ========================================================================= -->
+    <section id="the-system" class="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
+        
+        <div class="glass-panel gradient-border-emerald rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+            <!-- Background Emerald Glow Spot -->
+            <div class="absolute -top-32 -right-32 w-80 h-80 bg-emerald-500/10 rounded-full blur-[90px] pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left: App Details & Direct Download -->
+                <div class="lg:col-span-7">
                     
-                    <div class="space-y-4 mb-8 text-sm text-zinc-300 flex-grow">
-                        <div class="flex items-start gap-3"><span class="text-indigo-500">✓</span> <span><b>Role & Constraint Prompts:</b> Filter noise and enforce strict rules for auditable results.</span></div>
-                        <div class="flex items-start gap-3"><span class="text-indigo-500">✓</span> <span><b>Chain Prompting:</b> Break complex goals into multi-step execution sequences.</span></div>
-                        <div class="flex items-start gap-3"><span class="text-indigo-500">✓</span> <span><b>The Swipe File:</b> Includes ready-to-use templates for strategy, technical writing, and SEO.</span></div>
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono text-xs">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                            PUBLIC BETA TESTER RELEASE
+                        </span>
+                        <span class="px-2.5 py-1 rounded-full bg-zinc-800 text-zinc-400 font-mono text-xs border border-zinc-700">
+                            v9.1.0 Beta
+                        </span>
+                        <span class="px-2.5 py-1 rounded-full bg-zinc-800 text-zinc-400 font-mono text-xs border border-zinc-700">
+                            Android 8.0+
+                        </span>
                     </div>
 
-                    <div class="flex items-center justify-between pt-6 border-t border-zinc-800/50">
-                        <div class="flex flex-col">
-                            <span class="text-xs text-zinc-500 line-through">₹499</span>
-                            <span class="text-2xl font-bold text-white">₹99</span>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-2xl overflow-hidden border border-emerald-500/40 shadow-lg shadow-emerald-500/20 bg-black flex-shrink-0">
+                            <img src="the-system-icon.png" alt="THE SYSTEM Icon" class="w-full h-full object-cover">
                         </div>
-                        <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-xl font-bold text-sm transition shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)]">
-                            Get Access Now
+                        <div>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                                THE SYSTEM <span class="text-emerald-400 font-light text-xl sm:text-2xl">(Colab Edition)</span>
+                            </h2>
+                            <p class="text-xs font-mono text-emerald-400/90 mt-1">
+                                Local-First Adaptive Productivity &amp; RPG Habit Engine
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                        An autonomous, gamified operating system for your life and work. Plan your daily execution sequences, conquer real-world quests, level up player attributes, and test the experimental Colab cloud sync engine offline or online.
+                    </p>
+
+                    <!-- App Highlights -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-xs text-zinc-300">
+                        <div class="flex items-start gap-2.5 p-3 rounded-xl bg-black/40 border border-white/[0.05]">
+                            <span class="text-emerald-400 text-sm font-bold">⚡</span>
+                            <div>
+                                <b class="text-white">Local-First Architecture:</b>
+                                <p class="text-zinc-400 text-[11px] mt-0.5">Instant responsiveness. Operates completely offline with local storage.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 p-3 rounded-xl bg-black/40 border border-white/[0.05]">
+                            <span class="text-emerald-400 text-sm font-bold">⚔️</span>
+                            <div>
+                                <b class="text-white">Quest &amp; Attribute Engine:</b>
+                                <p class="text-zinc-400 text-[11px] mt-0.5">Turn goals into XP quests with dynamic stats and behavioral analytics.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 p-3 rounded-xl bg-black/40 border border-white/[0.05]">
+                            <span class="text-emerald-400 text-sm font-bold">🧠</span>
+                            <div>
+                                <b class="text-white">Colab AI Sync:</b>
+                                <p class="text-zinc-400 text-[11px] mt-0.5">Experimental model sync to adapt to personal productivity rhythms.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 p-3 rounded-xl bg-black/40 border border-white/[0.05]">
+                            <span class="text-emerald-400 text-sm font-bold">📲</span>
+                            <div>
+                                <b class="text-white">Zero Tracking / Bloat:</b>
+                                <p class="text-zinc-400 text-[11px] mt-0.5">Pure direct APK distribution. No invasive ad libraries or telemetry.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Download CTA Box -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4 border-t border-white/[0.06]">
+                        <a href="The-system-colab.apk" download="The-system-colab.apk" 
+                           class="inline-flex items-center justify-center gap-3 bg-emerald-400 hover:bg-emerald-300 active:scale-95 text-zinc-950 px-7 py-4 rounded-2xl font-black text-sm transition shadow-lg shadow-emerald-400/20 hover:shadow-emerald-400/40">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            <span>Download APK (Beta Tester)</span>
+                        </a>
+
+                        <div class="text-xs font-mono text-zinc-400">
+                            <span class="text-white font-bold">Package:</span> The-system-colab.apk<br>
+                            <span class="text-emerald-400">Size: ~8.87 MB</span> • Free Beta Build
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Mobile HUD / System Simulation Preview -->
+                <div class="lg:col-span-5">
+                    <div class="w-full max-w-sm mx-auto bg-[#06080d] border border-emerald-500/30 rounded-3xl p-5 shadow-2xl relative">
+                        <!-- Phone Header Bar -->
+                        <div class="flex items-center justify-between text-[11px] font-mono text-zinc-500 border-b border-white/[0.06] pb-3 mb-4">
+                            <span class="text-emerald-400 flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> SYSTEM HUD v9.1
+                            </span>
+                            <span>STATUS: ACTIVE</span>
+                        </div>
+
+                        <!-- Player Attribute Card -->
+                        <div class="p-4 rounded-2xl bg-zinc-900/70 border border-zinc-800 mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono text-zinc-400 uppercase">Player Level</span>
+                                <span class="text-sm font-black text-white font-mono">LVL 42 • S-RANK</span>
+                            </div>
+                            <!-- XP Bar -->
+                            <div class="w-full bg-zinc-800 h-2 rounded-full overflow-hidden mb-3">
+                                <div class="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full w-[84%] rounded-full"></div>
+                            </div>
+                            <!-- Mini Stat Grid -->
+                            <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-mono">
+                                <div class="bg-black/40 p-1.5 rounded-lg border border-white/[0.04]">
+                                    <div class="text-zinc-500">FOCUS</div>
+                                    <div class="text-emerald-400 font-bold">98%</div>
+                                </div>
+                                <div class="bg-black/40 p-1.5 rounded-lg border border-white/[0.04]">
+                                    <div class="text-zinc-500">STAMINA</div>
+                                    <div class="text-cyan-400 font-bold">89%</div>
+                                </div>
+                                <div class="bg-black/40 p-1.5 rounded-lg border border-white/[0.04]">
+                                    <div class="text-zinc-500">QUESTS</div>
+                                    <div class="text-purple-400 font-bold">14/15</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Quest Simulation -->
+                        <div class="p-4 rounded-2xl bg-zinc-900/70 border border-zinc-800">
+                            <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 flex items-center justify-between">
+                                <span>Active Daily Objective</span>
+                                <span class="text-emerald-400">+500 XP</span>
+                            </div>
+                            <div class="text-xs font-bold text-white mb-1">
+                                Ship Adaptive Machine Engine
+                            </div>
+                            <p class="text-[11px] text-zinc-400 leading-snug">
+                                Integrate vector embeddings into local offline database cache.
+                            </p>
+                            <div class="mt-3 flex items-center justify-between text-[10px] font-mono text-zinc-500">
+                                <span>Progress: 3 / 4 Subtasks</span>
+                                <span class="text-emerald-400">75% Complete</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <span class="text-[10px] font-mono text-zinc-500">
+                                Sideload .apk on Android to join testing
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 3: UPCOMING COOL PROJECTS SHOWCASE                                -->
+    <!-- ========================================================================= -->
+    <section id="upcoming" class="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 border-b border-white/[0.06] pb-8">
+            <div>
+                <div class="text-xs font-mono uppercase tracking-widest text-purple-400 mb-2">
+                    LAB RADAR &amp; EXPERIMENTAL BUILDS
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    Upcoming Projects in Pipeline
+                </h2>
+                <p class="text-zinc-400 text-sm mt-1 max-w-xl">
+                    Here is what Aaron Saha and AURA Studio are engineering next. Early access will be opened to PEF guide owners and active beta testers.
+                </p>
+            </div>
+            <div class="text-xs font-mono text-zinc-500">
+                Roadmap: 2026 – 2027 Cycle
+            </div>
+        </div>
+
+        <!-- Bento Grid for Upcoming Projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Project 1: JARVIS CORE -->
+            <div class="glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border-white/[0.08] hover:border-purple-500/40 transition">
+                <div class="absolute -top-10 -right-10 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-2xl">🤖</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/30">
+                            Alpha Build • 85%
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">JARVIS Core Engine</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed mb-6">
+                        An autonomous, self-healing background runtime capable of inspecting multi-repo worktrees, repairing broken builds, and dispatching tasks over REST APIs.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-white/[0.05] flex items-center justify-between text-xs font-mono text-zinc-500">
+                    <span>Stack: Python • Asyncio • LLM Kernel</span>
+                    <span class="text-purple-400">Target: Q3 2026</span>
+                </div>
+            </div>
+
+            <!-- Project 2: SYNAPSEDRIVE -->
+            <div class="glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border-white/[0.08] hover:border-cyan-500/40 transition">
+                <div class="absolute -top-10 -right-10 w-28 h-28 bg-cyan-500/10 rounded-full blur-2xl"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-2xl">🌐</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+                            Research Phase
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">SynapseDrive Neural Sync</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed mb-6">
+                        A peer-to-peer encrypted knowledge graph that embeds your local markdown notes, code snippets, and daily logs into hyper-fast semantic search index.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-white/[0.05] flex items-center justify-between text-xs font-mono text-zinc-500">
+                    <span>Stack: Rust • WebAssembly • Vector DB</span>
+                    <span class="text-cyan-400">Target: Q4 2026</span>
+                </div>
+            </div>
+
+            <!-- Project 3: CREATOR VAULT -->
+            <div class="glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border-white/[0.08] hover:border-amber-500/40 transition">
+                <div class="absolute -top-10 -right-10 w-28 h-28 bg-amber-500/10 rounded-full blur-2xl"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-2xl">⚡</span>
+                        <span class="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30">
+                            Pre-Production
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">The Creator Vault</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed mb-6">
+                        Algorithmic retention models, viral hook generators, and automated distribution scripts designed for high-leverage solo content creators.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-white/[0.05] flex items-center justify-between text-xs font-mono text-zinc-500">
+                    <span>Format: Framework + Automation Pack</span>
+                    <span class="text-amber-400">Target: Late 2026</span>
+                </div>
+            </div>
+
+            <!-- Project 4: EDGEMESH -->
+            <div class="glass-panel p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between border-white/[0.08] hover:border-indigo-500/40 transition md:col-span-2 lg:col-span-3">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-2xl flex-shrink-0">
+                            🛡️
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-lg font-bold text-white">NeuralMesh Failover Router</h3>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-900/50 text-indigo-300 border border-indigo-500/30">Prototype</span>
+                            </div>
+                            <p class="text-zinc-400 text-xs mt-1">
+                                An ultra-low latency gateway that routes LLM prompts dynamically across local Ollama models and cloud APIs with automatic rate-limit failover.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 flex-shrink-0">
+                        <span class="text-xs font-mono text-zinc-500">Status: Internal Dogfooding</span>
+                        <a href="https://github.com/A-aaron207" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                            <span>Follow Aaron on GitHub</span>
+                            <span>→</span>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col border-zinc-800">
-                <div class="absolute top-0 right-0 p-6 opacity-20 transition-opacity">
-                    <span class="text-4xl">⚡</span>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-2">The Creator Vault</h3>
-                <p class="text-zinc-500 text-sm mb-6">High-converting frameworks designed specifically for YouTubers, copywriters, and rapid social media growth.</p>
-                
-                <div class="space-y-4 mb-8 text-sm text-zinc-500 flex-grow">
-                    <div class="flex items-start gap-3 opacity-50"><span>🔒</span> <span>Viral Hook Generators</span></div>
-                    <div class="flex items-start gap-3 opacity-50"><span>🔒</span> <span>SEO-Optimized Outlines</span></div>
-                    <div class="flex items-start gap-3 opacity-50"><span>🔒</span> <span>Audience Psychology Models</span></div>
-                </div>
-
-                <div class="flex items-center justify-between pt-6 border-t border-zinc-800/30">
-                    <span class="text-xl font-bold text-zinc-600">Locked</span>
-                    <button disabled class="bg-zinc-900 text-zinc-600 px-6 py-3 rounded-xl font-bold text-sm border border-zinc-800 cursor-not-allowed">
-                        In Development
-                    </button>
-                </div>
-            </div>
-
         </div>
-    </main>
 
-    <section class="max-w-3xl mx-auto px-6 pb-32">
-        <h2 class="text-2xl font-bold text-center mb-10 text-white">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <div class="glass-card p-6 rounded-2xl">
-                <h4 class="font-bold text-white mb-2 text-sm">What exactly do I get?</h4>
-                <p class="text-zinc-400 text-sm">You receive immediate access to the 22-page "Confidential Edition" PDF guide. It contains all the frameworks (PEF) and the complete Swipe File of copy-paste templates.</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl">
-                <h4 class="font-bold text-white mb-2 text-sm">Is this just a list of basic prompts?</h4>
-                <p class="text-zinc-400 text-sm">No. This guide teaches you how to define comprehensive operating environments for AI. It focuses on precision, structured JSON output, and professional constraint-driven generation.</p>
-            </div>
-        </div>
     </section>
 
-    <footer class="border-t border-zinc-800/50 py-8 text-center text-xs font-mono text-zinc-600 uppercase tracking-widest">
-        <p>© 2026 AURA Studio. Secured by Jarvis.</p>
+    <!-- ========================================================================= -->
+    <!-- FOOTER                                                                    -->
+    <!-- ========================================================================= -->
+    <footer class="border-t border-white/[0.06] bg-[#030406] py-14 mt-20 text-xs text-zinc-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            
+            <!-- Brand & Info -->
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg overflow-hidden border border-white/[0.08] bg-black/60 p-0.5 flex items-center justify-center">
+                    <img src="favicon.png" alt="AURA Studio Logo" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <div class="text-white font-bold">AURA STUDIO</div>
+                    <div class="text-[11px] text-zinc-500">Autonomous Frameworks &amp; Software • Curated by Aaron Saha</div>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Links -->
+            <div class="flex flex-wrap items-center justify-center gap-6 font-mono text-xs">
+                <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">PEF on Gumroad</a>
+                <a href="The-system-colab.apk" download="The-system-colab.apk" class="hover:text-emerald-400 transition">Download APK</a>
+                <a href="https://github.com/A-aaron207/aura-studio" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub Repo</a>
+                <a href="mailto:aaronsaha.22@gmail.com" class="hover:text-white transition">Feedback</a>
+            </div>
+
+            <!-- System Telemetry Badge -->
+            <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-500 bg-white/[0.02] px-3 py-1.5 rounded-full border border-white/[0.06]">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>SYSTEM KERNEL: ONLINE</span>
+            </div>
+
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-white/[0.04] text-center text-zinc-600 text-[11px] font-mono">
+            &copy; 2026 AURA Studio. All rights reserved. Crafted by Aaron Saha.
+        </div>
     </footer>
 
 </body>
