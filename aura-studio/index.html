@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AURA Studio Store // AI Frameworks & Software</title>
+    <meta name="description" content="Official AURA Studio Store. Get the high-converting PEF Prompt Engineering Guide on Gumroad and download 'THE SYSTEM' Android Beta APK.">
+    <meta name="keywords" content="AURA Studio, AI Prompts, The System APK, Android Beta, Prompt Engineering Framework, PEF Architecture, Aaron Saha">
+    <meta name="author" content="Aaron Saha">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:title" content="AURA Studio Store // AI Frameworks & Software">
+    <meta property="og:description" content="High-leverage prompt engineering frameworks and local-first adaptive productivity software.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="icon-192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="icon-192.png" type="image/png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca'
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            900: '#064e3b'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            background-color: #06070a; 
+            color: #e4e4e7; 
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 32px 32px, 32px 32px;
+        }
+        
+        .glass-card { 
+            background: rgba(12, 14, 21, 0.75); 
+            backdrop-filter: blur(18px); 
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        
+        .glass-card:hover { 
+            border-color: rgba(99, 102, 241, 0.4); 
+            transform: translateY(-4px); 
+            box-shadow: 0 16px 40px -12px rgba(99, 102, 241, 0.2); 
+        }
+
+        .glass-card-beta:hover {
+            border-color: rgba(16, 185, 129, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px -12px rgba(16, 185, 129, 0.2);
+        }
+        
+        .text-gradient { 
+            background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 50%, #818cf8 100%);
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .text-gradient-emerald {
+            background: linear-gradient(135deg, #6ee7b7 0%, #34d399 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.05); }
+        }
+        .animate-subtle-pulse { animation: pulse-subtle 3s ease-in-out infinite; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #06070a; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+        details summary::-webkit-details-marker { display: none; }
+        details > summary { list-style: none; }
+    </style>
+</head>
+<body class="selection:bg-indigo-500/30 selection:text-white min-h-screen flex flex-col font-sans antialiased">
+
+    <!-- Ambient background light blur -->
+    <div class="fixed top-[-15%] left-[15%] w-[550px] h-[550px] bg-indigo-600/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-[10%] right-[10%] w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+    <!-- Navigation Header -->
+    <nav class="w-full border-b border-zinc-800/80 bg-[#06070a]/80 backdrop-blur-xl sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            
+            <!-- Logo & Store Badge -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 p-[1px] shadow-lg shadow-indigo-600/20 group-hover:shadow-indigo-600/40 transition">
+                    <div class="w-full h-full bg-[#09090b] rounded-[11px] flex items-center justify-center font-black text-indigo-400 font-mono text-sm">
+                        A
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="font-extrabold tracking-tight text-lg text-white flex items-center gap-2">
+                        AURA<span class="text-indigo-400 font-normal">.STUDIO</span>
+                        <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/30">Store</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#products" class="hover:text-white transition">All Products</a>
+                <a href="#beta-program" class="hover:text-emerald-400 flex items-center gap-1.5 transition">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Beta APK
+                </a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </div>
+
+            <!-- Header Action Button -->
+            <div class="flex items-center gap-3">
+                <a href="#beta-program" class="hidden sm:inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 px-3.5 py-1.5 rounded-lg border border-emerald-500/30 transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <span>Beta Program Open</span>
+                </a>
+                <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-4 py-2 rounded-lg transition shadow-md shadow-indigo-600/30 flex items-center gap-1.5">
+                    <span>Gumroad Store</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Store Header -->
+    <header class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center relative">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 mb-6 border border-zinc-700/60 rounded-full bg-zinc-900/80 backdrop-blur-md text-zinc-300 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+            AURA STUDIO // OFFICIAL STORE &amp; BETA PORTAL
+        </div>
+        
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-6 text-white leading-tight">
+            High-Leverage Frameworks &amp;<br>
+            <span class="text-gradient">Next-Gen Software Tools.</span>
+        </h1>
+        
+        <p class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+            Welcome to the official digital storefront. Access production-tested prompt engineering architectures on Gumroad, and test early builds of local-first productivity systems.
+        </p>
+
+        <!-- Quick Store Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left mb-12">
+            <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
+                <div class="text-xs font-mono text-zinc-500 uppercase">Framework</div>
+                <div class="text-lg font-bold text-white mt-1">PEF Architecture</div>
+                <div class="text-xs text-indigo-400 mt-0.5">2026 Edition</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
+                <div class="text-xs font-mono text-zinc-500 uppercase">Software</div>
+                <div class="text-lg font-bold text-white mt-1">THE SYSTEM</div>
+                <div class="text-xs text-emerald-400 mt-0.5">Android v9.1 Beta</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
+                <div class="text-xs font-mono text-zinc-500 uppercase">Delivery</div>
+                <div class="text-lg font-bold text-white mt-1">Instant Access</div>
+                <div class="text-xs text-zinc-400 mt-0.5">Direct &amp; Gumroad</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-sm">
+                <div class="text-xs font-mono text-zinc-500 uppercase">Status</div>
+                <div class="text-lg font-bold text-emerald-400 mt-1 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Open Beta
+                </div>
+                <div class="text-xs text-zinc-400 mt-0.5">Free Tester Access</div>
+            </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="inline-flex p-1.5 rounded-2xl bg-zinc-900/90 border border-zinc-800 text-xs font-medium" id="filter-container">
+            <button onclick="filterProducts('all')" id="tab-all" class="px-5 py-2 rounded-xl text-white bg-indigo-600 transition shadow">
+                All Products (3)
+            </button>
+            <button onclick="filterProducts('guides')" id="tab-guides" class="px-5 py-2 rounded-xl text-zinc-400 hover:text-white transition">
+                Guides &amp; Frameworks
+            </button>
+            <button onclick="filterProducts('apps')" id="tab-apps" class="px-5 py-2 rounded-xl text-zinc-400 hover:text-white transition flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Apps &amp; Software (Beta)
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Products Catalog -->
+    <main id="products" class="max-w-6xl mx-auto px-6 pb-20 flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            
+            <!-- PRODUCT 1: AI Prompts That Actually Work - Gumroad (PEF Guide) -->
+            <div class="product-card guides glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between border-zinc-800 hover:border-indigo-500/60 transition-all duration-300">
+                <!-- Glowing ambient accent -->
+                <div class="absolute -top-24 -right-24 w-52 h-52 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div>
+                    <!-- Badges Row -->
+                    <div class="flex items-center justify-between gap-3 mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-indigo-500/15 text-indigo-300 text-[11px] font-mono font-bold px-3 py-1 rounded-full border border-indigo-500/30 uppercase tracking-wider">
+                                Digital Framework Guide
+                            </span>
+                            <span class="bg-amber-500/15 text-amber-300 text-[11px] font-mono font-bold px-2.5 py-1 rounded-full border border-amber-500/30">
+                                ★ Bestseller
+                            </span>
+                        </div>
+                        <span class="text-xs font-mono text-zinc-500">2026 Edition</span>
+                    </div>
+
+                    <!-- Icon & Title -->
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-3xl shadow-inner flex-shrink-0">
+                            🧠
+                        </div>
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                                AI Prompts That Actually Work
+                            </h2>
+                            <p class="text-xs font-mono text-indigo-400 mt-1">PEF Architecture // Confidential Edition</p>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                        Stop treating AI like a basic chatbot. Master the 4-part <b>PEF Framework</b> (Role, Context, Task, Output) to generate structured, auditable JSON data and autonomous multi-agent workflows across Claude, ChatGPT, and Gemini.
+                    </p>
+
+                    <!-- Feature List -->
+                    <div class="space-y-3 mb-8 text-sm text-zinc-300">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Role &amp; Constraint Prompts:</b> Eliminate model hallucination with rigid guardrails and negative prompting rules.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Multi-Step Chain Prompting:</b> Deconstruct complex business processes into self-verifying execution pipelines.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Complete Swipe File:</b> Copy-paste production templates for strategy, technical architecture, copy, and SEO.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Instant Delivery:</b> Direct PDF download via Gumroad with lifetime revision access.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Footer & Pricing -->
+                <div class="pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
+                    <div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl font-black text-white">₹99</span>
+                            <span class="text-sm text-zinc-500 line-through">₹499</span>
+                            <span class="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">80% OFF</span>
+                        </div>
+                        <p class="text-[11px] font-mono text-zinc-500 mt-0.5">One-time payment • Immediate PDF delivery</p>
+                    </div>
+                    
+                    <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] text-white px-7 py-3.5 rounded-2xl font-bold text-sm transition shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50">
+                        <span>Get Access on Gumroad</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2: THE SYSTEM Colab Edition (Android Beta APK) -->
+            <div class="product-card apps glass-card glass-card-beta rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between border-emerald-500/30 bg-[#070d11]/70 transition-all duration-300">
+                <!-- Glowing ambient accent -->
+                <div class="absolute -top-24 -right-24 w-52 h-52 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div>
+                    <!-- Badges Row -->
+                    <div class="flex items-center justify-between gap-3 mb-6">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[11px] font-mono font-bold px-3 py-1 rounded-full border border-emerald-500/40 uppercase tracking-wider flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Android Beta App
+                            </span>
+                            <span class="bg-zinc-800/80 text-zinc-300 text-[11px] font-mono px-2.5 py-1 rounded-full border border-zinc-700">
+                                v9.1.0 Beta
+                            </span>
+                        </div>
+                        <span class="text-xs font-mono text-emerald-400/90 font-medium">8.87 MB APK</span>
+                    </div>
+
+                    <!-- Icon & Title -->
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-2xl overflow-hidden border border-emerald-500/40 shadow-lg shadow-emerald-500/10 flex-shrink-0 bg-black">
+                            <img src="icon-192.png" alt="THE SYSTEM Icon" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                                THE SYSTEM <span class="text-emerald-400 text-lg sm:text-xl font-normal">(Colab Beta)</span>
+                            </h2>
+                            <p class="text-xs font-mono text-emerald-400/90 mt-1">Adaptive Productivity &amp; Quest Engine // Mobile APK</p>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-6">
+                        A local-first, gamified productivity system designed to plan, execute, measure, and adapt. Level up your real-world player attributes, conquer quest logs, and test the experimental Colab cloud sync engine.
+                    </p>
+
+                    <!-- Feature List -->
+                    <div class="space-y-3 mb-8 text-sm text-zinc-300">
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Gamified Quest &amp; RPG Progression:</b> Track daily habits, skill trees, and player levels with real-time feedback loops.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Local-First Speed:</b> Runs entirely on device with zero latency, offline mode, and high-security storage.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Colab Sync &amp; AI Integration:</b> Built with experimental machine learning modules to adapt to your productivity cycles.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">✓</div>
+                            <span><b>Direct APK Sideload:</b> Standalone installer for Android 8.0+ smartphones and tablets. No play store account required.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Footer & Actions -->
+                <div class="pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
+                    <div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-3xl font-black text-emerald-400">FREE</span>
+                            <span class="text-xs font-mono uppercase tracking-wider text-zinc-400 bg-zinc-800 px-2 py-0.5 rounded border border-zinc-700">
+                                Beta Tester Access
+                            </span>
+                        </div>
+                        <p class="text-[11px] font-mono text-zinc-400 mt-0.5">Direct APK download • Android 8.0+</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <a href="#beta-program" class="px-4 py-3.5 rounded-2xl font-mono text-xs text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700 transition border border-zinc-700 text-center">
+                            Guide
+                        </a>
+                        <a href="The-system-colab.apk" download="The-system-colab.apk"
+                           class="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 active:scale-[0.98] text-zinc-950 px-6 py-3.5 rounded-2xl font-bold text-sm transition shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span>Download APK (Beta)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3: The Creator Vault (Upcoming) -->
+            <div class="product-card guides glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between border-zinc-800/60 opacity-85 hover:opacity-100 transition-all duration-300 lg:col-span-2">
+                <div>
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="bg-purple-500/10 text-purple-300 text-[11px] font-mono font-bold px-3 py-1 rounded-full border border-purple-500/30 uppercase tracking-wider">
+                                Framework Expansion
+                            </span>
+                            <span class="bg-zinc-800 text-zinc-400 text-[11px] font-mono px-2 py-0.5 rounded">
+                                In Active Development
+                            </span>
+                        </div>
+                        <span class="text-xs font-mono text-zinc-500">Scheduled: Q3 2026</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white tracking-tight flex items-center gap-3">
+                                <span>⚡ The Creator &amp; Founder Vault</span>
+                            </h3>
+                            <p class="text-zinc-400 text-sm mt-1 max-w-2xl">
+                                Advanced algorithmic hook generators, audience retention frameworks, and automated programmatic copywriting systems trained on viral patterns.
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-mono text-zinc-500 border border-zinc-800 px-3 py-1.5 rounded-xl bg-zinc-900/60">
+                                🔒 Access Restricted
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-zinc-800/50 flex flex-wrap items-center justify-between text-xs text-zinc-500 font-mono gap-4">
+                    <span>Includes: Viral Hook Matrices • Script Archetypes • SEO Engine</span>
+                    <span class="text-indigo-400">Buyers of the PEF Guide receive priority invitation.</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- BETA TESTER PROGRAM & INSTALLATION GUIDE -->
+    <section id="beta-program" class="border-t border-zinc-800/80 bg-[#080a10]/90 py-20 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    ANDROID BETA PROGRAM
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+                    How to Install &amp; Test <span class="text-gradient-emerald">THE SYSTEM APK</span>
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                    Thank you for participating in the early tester program. Follow this 4-step quick start guide to sideload the APK onto your Android device.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Step 1 -->
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 relative">
+                    <div class="text-3xl font-black text-emerald-500/30 font-mono mb-3">01</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Download APK</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Tap the download button below directly from your Android browser to get <code class="text-emerald-400">The-system-colab.apk</code> (8.87 MB).
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 relative">
+                    <div class="text-3xl font-black text-emerald-500/30 font-mono mb-3">02</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Allow Unknown Apps</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        If Android shows an install warning, tap <b>Settings</b> and toggle <i>"Allow from this source"</i> for your browser or Files app.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 relative">
+                    <div class="text-3xl font-black text-emerald-500/30 font-mono mb-3">03</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Install &amp; Launch</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Tap <b>Install</b>. Once completed, open <b>THE SYSTEM</b>, customize your player profile, and initialize your quest board.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 relative">
+                    <div class="text-3xl font-black text-emerald-500/30 font-mono mb-3">04</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Send Feedback</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Encountered a bug or have a suggestion? Share your diagnostics with Aaron Saha to shape the next stable release.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Beta Download Banner & Spec Box -->
+            <div class="rounded-3xl p-8 bg-gradient-to-r from-emerald-950/40 via-zinc-900/80 to-indigo-950/30 border border-emerald-500/40 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-5">
+                    <div class="w-16 h-16 rounded-2xl overflow-hidden border border-emerald-500/40 shadow-md bg-black flex-shrink-0">
+                        <img src="icon-192.png" alt="THE SYSTEM" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="text-white font-bold text-xl">The-system-colab.apk</div>
+                        <div class="text-xs font-mono text-zinc-400 mt-1 flex flex-wrap gap-x-4 gap-y-1">
+                            <span><b>Version:</b> 9.1.0 Beta</span>
+                            <span><b>Size:</b> 8.87 MB</span>
+                            <span><b>Requires:</b> Android 8.0+</span>
+                            <span><b>Architecture:</b> Universal Standalone</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 w-full md:w-auto">
+                    <a href="The-system-colab.apk" download="The-system-colab.apk" 
+                       class="w-full md:w-auto text-center inline-flex items-center justify-center gap-2 bg-emerald-400 hover:bg-emerald-300 text-zinc-950 px-8 py-4 rounded-2xl font-extrabold text-sm transition shadow-lg shadow-emerald-400/20">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <span>Download APK Now</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section id="faq" class="max-w-4xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-3">Frequently Asked Questions</h2>
+            <p class="text-zinc-400 text-sm">Everything you need to know about the frameworks, APK testing, and store orders.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    <span>How do I receive the AI Prompts guide after purchasing on Gumroad?</span>
+                    <span class="text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
+                    Immediately upon checkout on Gumroad (₹99), you receive instant access to download the full 22-page "Confidential Edition" PDF guide. You will also receive an email confirmation with your permanent download link and any future revision updates.
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    <span>Is "THE SYSTEM" Android APK safe to install on my phone?</span>
+                    <span class="text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
+                    Yes. This APK is compiled directly from the official repository by Aaron Saha. Because it is distributed directly as an independent beta build rather than through the Google Play Store, Android will ask you to confirm installing from unknown sources. No shady trackers or invasive permissions are included.
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    <span>What LLMs work with the PEF Prompt Architecture?</span>
+                    <span class="text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
+                    The PEF (Role, Context, Task, Output) architecture is universally model-agnostic. It has been tested and tuned extensively across Claude 3.5 Sonnet / 3.7 Sonnet, OpenAI GPT-4o / o1 / o3-mini, Google Gemini 1.5 / 2.0 / 2.5, and open-source models like DeepSeek R1 and Llama 3.
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    <span>How can I submit feedback or bug reports for the beta APK?</span>
+                    <span class="text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-zinc-800/60 pt-4">
+                    You can submit beta feedback directly by opening an issue on our GitHub repository or emailing Aaron Saha at <a href="mailto:aaronsaha.22@gmail.com" class="text-indigo-400 underline">aaronsaha.22@gmail.com</a> with your device model and Android version.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800/80 bg-[#06070a] py-12 text-zinc-500 text-xs">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-7 h-7 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center font-bold text-indigo-400 font-mono text-xs">
+                    A
+                </div>
+                <div>
+                    <span class="text-white font-bold tracking-tight">AURA Studio Store</span>
+                    <span class="mx-2">•</span>
+                    <span>Curated by Aaron Saha</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6 font-mono text-xs">
+                <a href="https://sahaaron1.gumroad.com/l/brtdgt" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Gumroad Product</a>
+                <a href="The-system-colab.apk" download="The-system-colab.apk" class="hover:text-emerald-400 transition">Download APK</a>
+                <a href="https://github.com/A-aaron207/aura-studio" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
+            </div>
+
+            <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                <span>SYSTEM STATUS: ALL RELEASES OPERATIONAL</span>
+            </div>
+
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 mt-8 pt-8 border-t border-zinc-900 text-center text-zinc-600 text-[11px] font-mono">
+            &copy; 2026 AURA Studio. All rights reserved. Secured by Jarvis Architecture.
+        </div>
+    </footer>
+
+    <!-- Interactive Filtering Script -->
+    <script>
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const tabAll = document.getElementById('tab-all');
+            const tabGuides = document.getElementById('tab-guides');
+            const tabApps = document.getElementById('tab-apps');
+
+            // Reset tab styles
+            [tabAll, tabGuides, tabApps].forEach(tab => {
+                tab.className = "px-5 py-2 rounded-xl text-zinc-400 hover:text-white transition";
+            });
+
+            if (category === 'all') {
+                tabAll.className = "px-5 py-2 rounded-xl text-white bg-indigo-600 transition shadow";
+                cards.forEach(card => card.style.display = 'flex');
+            } else if (category === 'guides') {
+                tabGuides.className = "px-5 py-2 rounded-xl text-white bg-indigo-600 transition shadow";
+                cards.forEach(card => {
+                    if (card.classList.contains('guides')) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            } else if (category === 'apps') {
+                tabApps.className = "px-5 py-2 rounded-xl text-white bg-emerald-600 transition shadow";
+                cards.forEach(card => {
+                    if (card.classList.contains('apps')) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
